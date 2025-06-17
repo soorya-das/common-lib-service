@@ -1,4 +1,5 @@
 name: Continuous Deployment
+
 on:
   push:
     branches:
@@ -10,13 +11,21 @@ jobs:
     permissions:
       contents: read
       packages: write
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Publish package
+
+      - name: Make Maven Wrapper Executable
+        run: chmod +x mvnw
+
+      - name: Publish to GitHub Packages
         run: ./mvnw --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.MAVEN_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
