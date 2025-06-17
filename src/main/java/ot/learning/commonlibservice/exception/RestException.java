@@ -1,4 +1,4 @@
-package ot.learning.commonlibservice.response.exception;
+package ot.learning.commonlibservice.exception;
 
 import lombok.Getter;
 import lombok.Setter;
