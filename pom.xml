@@ -38,7 +38,7 @@
         <repository>
             <id>github</id>
             <name>GitHub learning Apache Maven Packages</name>
-            <url>https://github.com/soorya-das/common-lib-service</url>
+            <url>https://maven.pkg.github.com/soorya-das/common-lib-service</url>
         </repository>
     </distributionManagement>
     <dependencies>
