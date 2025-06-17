@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-
+G
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -28,4 +28,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: ./mvnw --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.MAVEN_PASSWORD }}
