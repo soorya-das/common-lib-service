@@ -6,23 +6,12 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v2
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-          cache: 'maven'
-      # Cache local Maven repository
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-      # code formatting using spotless
-      - name: Check code formatting
-        run: mvn spotless:check
+  call-ci-job:
+    uses: soorya-das/devops-workflow/.github/workflows/ci.yml@main
+    with:
+      pr-title: "^LIB-.*: .*"
+      project-key: common-lib-service
+      sonar-check-enabled: false
+    secrets:
+      github-token: ${{ secrets.MAVEN_PASSWORD }}
+      github-username: ${{ secrets.MAVEN_USERNAME }}
