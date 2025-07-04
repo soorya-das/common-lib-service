@@ -10,7 +10,7 @@
     </parent>
     <groupId>ot.learning</groupId>
     <artifactId>common-lib-service</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <name>common-lib-service</name>
     <description>common-lib-service</description>
 
