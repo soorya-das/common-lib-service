@@ -30,10 +30,7 @@ public enum VerificationStatus {
         return this.id;
     }
 
-    private VerificationStatus
-            (final Integer id) {
+    private VerificationStatus(final Integer id) {
         this.id = id;
     }
-
-
 }

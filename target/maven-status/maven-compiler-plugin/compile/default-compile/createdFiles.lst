@@ -2,7 +2,10 @@ ot\learning\commonlibservice\exception\RestException.class
 ot\learning\commonlibservice\constants\KafkaTopic.class
 ot\learning\commonlibservice\response\Response$ResponseBuilder.class
 ot\learning\commonlibservice\response\Response.class
+ot\learning\commonlibservice\contract\LoginRequest.class
 ot\learning\commonlibservice\constants\MessageStatus.class
 ot\learning\commonlibservice\contract\UserVerificationRequest.class
 ot\learning\commonlibservice\constants\VerificationStatus.class
+ot\learning\commonlibservice\response\ErrorResponse.class
 ot\learning\commonlibservice\contract\UserVerificationRequest$UserVerificationRequestBuilder.class
+ot\learning\commonlibservice\exception\GlobalExceptionHandler.class

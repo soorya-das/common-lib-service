@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import ot.learning.commonlibservice.constants.VerificationStatus;
 
 import java.util.UUID;
